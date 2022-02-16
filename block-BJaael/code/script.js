@@ -1,5 +1,4 @@
 let boxContainer = document.querySelector('.box-container');
-// let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 let arr = [];
  for(let i=0;i<500 ; i++){
      arr.push(i);      

@@ -33,3 +33,28 @@ img {
   max-width: 100%;
   height: auto;
 }
+.heading{
+  background-color: chartreuse;
+  padding: .3rem 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: whitesmoke;
+  margin: 1rem 0;
+}
+.box-container{
+  display:flex;
+  width: 100%;
+  height: auto;
+  flex-flow: row wrap;
+  padding: 20px 0;
+}
+.box{
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

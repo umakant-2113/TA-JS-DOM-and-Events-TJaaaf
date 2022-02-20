@@ -35,3 +35,21 @@ img {
   max-width: 100%;
   height: auto;
 }
+.container{
+  
+  flex-direction: column;
+  background-color: blueviolet;
+  width: 330px;
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+.form-control{
+padding: 1rem;
+align-items: center;
+display: flex;
+  justify-content: center;
+}
+input{
+  padding: .3rem;
+  margin: .3rem;
+}

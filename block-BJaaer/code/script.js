@@ -1,55 +1,58 @@
-const form = document.querySelector('form');
-const submitButton = document.querySelector('#submit');
-const modalwrapper = document.querySelector('.modal-wrapper');
-const dataModal = document.querySelector('.modal-container');
-// to  hide the modal  when   the  button clicked 
-const closeModal = document.querySelector('.close-btn');
-// Hide the Modal so we can not see it while filling the form 
+let form=document.querySelector(`form`);
 
-userInfo ={};
+let modal=document.querySelector(`.overlay`)
+
+let modalInfo=document.querySelector(`.modal-info`)
+
+let userData={};
 
 
-form.addEventListener('submit',(event)=>{
-    event.preventDefault();
-    userInfo.name = form.elements.name.value;
-    userInfo.email = form.elements.email.value;
-    userInfo.entertainment = form.elements.entertainment.value;
-    userInfo.color  = form.elements.color.value;
-    userInfo.userRating  = form.elements.range.value;
-    userInfo.consent = form.elements.terms.checked;
-    userInfo.bookGenre  = form.elements.drone.value;
+form.addEventListener(`submit`,(event)=>{
+   event.preventDefault();
+   let element=event.target.elements;
+userData.name=element.name.value;
+userData.email=element.email.value;
+userData.choice=element.choice.value;
+userData.color=element.color.value;
+userData.range=element.range.value;
+userData.drone=element.drone.value;
+userData.terms=element.terms.checked;
 
-    //modal data    
-    
-    document.querySelector('.modalName').innerText =userInfo.name;
-    document.querySelector('.modalEmail').innerText =userInfo.email;
 
-    
-    document.querySelector('.modalrating').innerText =userInfo.userRating;
-    document.querySelector('.modalColor').innerText =userInfo.color;
-    document.querySelector('.modalbookgenre').innerText =userInfo.bookGenre;
-    
-    let termsAndcondition =userInfo.consent== true ? 'accepted' : 'do not accepted'; 
-    document.querySelector('.consent').innerText =termsAndcondition;
-    let choice = userInfo.entertainment;
-    document.querySelector('.modalChoices').innerText = choice;
-});
-
-//show modal 
-submitButton.addEventListener('click',function(){
-    modalwrapper.style.display="inline-block";
-});
-
-//hide  the modal when  the  close button clicked
-closeModal.addEventListener('click',function(){
-    modalwrapper.style.display='none';
+let close=document.querySelector(`.modal-close`);
+close.addEventListener(`click`,(event)=>{
+    location.reload();
+})
+    displayInfo(userData);
 })
 
 
+function displayInfo(data={}){
+    modalInfo.innerHTML="";
+    let h1=document.createElement(`h1`);
+    h1.innerText=`hello--${data.name}`;
 
+    let email=document.createElement(`p`);
+    email.innerText=`email--${data.email}`;
 
+    let choice=document.createElement(`p`);
+    choice.innerText=`movie--${data.choice}`;
 
+    let color=document.createElement(`p`)
+    color.innerText=`color--${data.color}`
 
+    let range=document.createElement(`p`)
+    range.innerText=`range--${data.range}`
+
+    let drone=document.createElement(`p`)
+    drone.innerText=`drone--${data.drone}`
+
+    let terms=document.createElement(`p`);
+    terms.innerText=`${data.terms== true ? "you have acceppted" : "you have not accept"}`;
+    
+    modalInfo.append(h1,email,choice,color,range,drone,terms);
+}
+displayInfo(userData);
 
 
 

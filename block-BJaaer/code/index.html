@@ -8,7 +8,7 @@
   </head>
   <body>
     <div>
-      <form class="container">
+      <form class="container open" >
         <div class="form-control">
           <label for="name">Your Name:</label>
           <input
@@ -29,7 +29,7 @@
         </div>
         <div class="form-control">
           <label for="movies">What do you love?</label>
-          <select id="gender" name="entertainment">
+          <select id="gender" name="choice">
             <option value="movies">Movies</option>
             <option value="series">Series</option>
             <option value="others">Others</option>
@@ -89,21 +89,24 @@
           <input type="checkbox" id="terms" name="terms" />
           <label for="terms">I Agree to Terms</label>
         </div>
-        <button type="submit" id="submit">Submit</button>
+        <button type="submit" id="submit">Submit 
+          
+        </button>
       </form>
       <!-- next page -->
-      <div class="modal-wrapper">
-        <div class="modal-container">
-          <btn class="close-btn">Close</btn>
-          <h3>Hello <span class="modalName"></span></h3>
-          <p>Email : <span class="modalEmail"></span></p>
-          <p> You Love :<span class="modalChoice"></span></p>
-          <p> Color:<span class="modalColor"></span></p>
-          <p> Rating:<span class="modalrating"></span></p>
-          <p>Book Genre:<span class="modalbookgenre"></span></p>
-          <p>👉You <span class="consent"></span> to Terms and Condition </p>
+      
+      <div class="overlay">
+        <div class="container-relative">
+          <button class="modal-close"> Close</button>
+          <div class="modal-info">
+            <h1>hello  </h1>
+            <p>email  </p>
+            <p>movie  </p>
+            <p>color  </p>
+            <p>renage  </p>
+            <p>genre  </p>
+            <p>i agree to terms   </p>         
         </div>
-      </div>
       </div>
     <script src="./script.js"></script>
   </body>

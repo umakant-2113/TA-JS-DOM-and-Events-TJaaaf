@@ -55,7 +55,7 @@ table {
 }
 /* custome style */
 .container{
-  max-width: 95%;
+  max-width: 100%;
   width: 94%;
   margin: 0 auto;
   padding: 0 2rem;
@@ -63,6 +63,7 @@ table {
 }
 .box{
   padding: 2rem 0;
+  
 }
 .hero{
   display: flex;
@@ -128,14 +129,16 @@ img{
   text-align: center;
   margin-left: 10rem;
   margin-top: .3rem;
+  border-radius: 50%;
 }
 p{
   font-size: 1.em;
   text-align: center;
   margin: 1rem  0;
 }
-button{
-  margin-left: 10rem;
+a{
+  margin-left: 9rem;
+  margin-top: 1rem;
   padding: .3rem .6rem;
   background-color: black;
   color: whitesmoke;

@@ -12,8 +12,10 @@ function createUi(char){
     h2.innerText=char.name;
     let p=document.createElement(`p`);
     p.innerText=char.description;
-    let btn=document.createElement(`button`);
-    btn.innerText="KNOW MORE";
+    let btn=document.createElement(`a`);
+    btn.href=char.wikiLink;
+    btn.style.textDecoration="none";
+    btn.innerText="KNOW MORE"
     div.append(img,h2,p,btn);
     alldata.append(div);
 }
